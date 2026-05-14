@@ -14,7 +14,8 @@
 - Save and Load commands!
 - Auto-save config settings in configs.json
 
-# [0.03]
+# [0.022]
+- You guys were requesting this so much, so i just had to!
 - New UI editor like nano(but better)
 - !medit <file>
 - Type !myenv --env to edit current env

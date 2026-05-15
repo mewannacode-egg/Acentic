@@ -19,4 +19,8 @@
 - New UI editor like nano(but better)
 - !medit <file>
 - Type !medit --env to edit current env (somewhat broken since i hurried it)
+
+# [0.023]
+- All the commands are now in MCommands.py
+- Thats all...
 # -----> End... <-----

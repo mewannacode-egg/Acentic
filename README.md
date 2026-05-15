@@ -18,5 +18,5 @@
 - You guys were requesting this so much, so i just had to!
 - New UI editor like nano(but better)
 - !medit <file>
-- Type !medit --env to edit current env
+- Type !medit --env to edit current env (somewhat broken since i hurried it)
 # -----> End... <-----

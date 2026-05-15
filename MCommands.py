@@ -491,7 +491,7 @@ def cmd_version(args):  #tells you the everything about this Python REPL
     print("- Language: Python (for now...)")
     print("-----> End... <-----")
 
-# This will only show you the last 5 updates, if you want to view EVERY update go and see MChangelog.md
+# This will only show you the last 5 updates, if you want to view EVERY update go and see README.md
 @command("changelog")
 def cmd_changelog(args):
 

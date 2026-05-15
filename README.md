@@ -1,3 +1,8 @@
+# -----> About <-----
+- MPython is a custom Python REPL, thats it i dont know what else to say
+- Current version: v0.023
+
+
 # -----> Changelog <-----
 # [0.01]
 - Basic REPL

@@ -412,6 +412,7 @@ Currently active chapter number. Set via `chapter()` function.
 ---
 
 ## License & Credits
-LICENSE
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 Built for text-based manhwa enthusiasts. Have fun creating!

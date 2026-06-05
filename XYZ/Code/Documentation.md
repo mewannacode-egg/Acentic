@@ -47,8 +47,8 @@ callable STORAGE-LOCATION-HERE NAME(INT arg1, INT arg2) {
 
 // Type 2 - family functions
 callable STORAGE-LOCATION-HERE name(INT id) {
-  let STORAGE-LOCATION-HERE num1 = getChildValue(INT id, childNum1); // get the value of childNum1
-  let STORAGE-LOCATION-HERE num2 = getChildValue(INT id, childNum2); // same here for childNum2
+  let STORAGE-LOCATION-HERE num1 = INT getChildValue(INT id, childNum1); // get the value of childNum1
+  let STORAGE-LOCATION-HERE num2 = INT getChildValue(INT id, childNum2); // same here for childNum2
 }
 
 let editable STORAGE-LOCATION-HERE childNum1(INT id) = INT 0; // use the same variable type and name as the parent (funtion)
@@ -60,7 +60,12 @@ Functions in XYZC are storage-explicit and support family hierarchies. The `edit
 
 ### Variables
 ```
-[FILL IN: Variable declaration syntax]
+let virtual a = INT 7; // stores a in memory
+let register a = INT 7; // stores a in CPU
+let stack a = INT 7; // stores a in a stack frame
+let static a = INT 7; // stores a in a data segment
+let heap a = INT 7; // stores a in a heap
+let volatile a = INT 7; // store a in the Stack (if it's local) or the Data Segment (if it's global).
 ```
 
 ### Control Flow

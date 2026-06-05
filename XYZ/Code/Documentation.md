@@ -70,6 +70,8 @@ let STORAGE-LOCATION-HERE volatile a = INT 7; // forces the compiler to lookup t
 let STORAGE-LOCATION-HERE a = INT 7 at ADDR(0x4000) // store a at a specific address
 ```
 
+Variables in XYZC give explicit control over storage location — virtual, register, stack, static, or heap. Flags like `volatile` and address pinning (`at ADDR`) allow fine-grained optimization and hardware interaction.
+
 ### Control Flow
 ```
 [FILL IN: If/else, loops, etc.]

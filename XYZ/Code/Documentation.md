@@ -37,9 +37,23 @@ as task(UNIQUE-ID) with address(TYPE-TASK-ADDRESS-HERE) {
 }
 ```
 Tasks are the fundamental execution units in XYZC. Each task has a unique identifier and an explicit memory address, giving the programmer full control over where code executes and how it's isolated.
+
 ### Function Declaration
 ```
-[FILL IN: Function syntax]
+// Type 1 - normal functions
+callable STORAGE-LOCATION-HERE NAME(INT arg1, INT arg2) {
+  return INT arg1 + INT arg2;
+}
+
+// Type 2 - family functions
+callable STORAGE-LOCATION-HERE name(INT id) {
+  let STORAGE-LOCATION-HERE num1 = getChildValue(INT id, childNum1); // get the value of childNum1
+  let STORAGE-LOCATION-HERE num2 = getChildValue(INT id, childNum2); // same here for childNum2
+}
+
+let editable STORAGE-LOCATION-HERE childNum1(INT id) = INT 0; // use the same variable type and name as the parent (funtion)
+let editable STORAGE-LOCATION-HERE childNum1(INT id) = int 0; //same
+// ^^^^^^^^^^ this keyword allows files (or users) to edit the variable outside the file
 ```
 
 ### Variables

@@ -18,9 +18,10 @@ XYZC is engineered for scenarios where C's simplicity and control meet modern sy
 The language assumes you know what you're doing. It provides the tools for low-level manipulation, direct hardware access, and fine-grained resource management without apology or compromise. Safety mechanisms exist where they add value without performance cost; elsewhere, the responsibility lies with the programmer.
 
 ### Target Use Cases
-- **[FILL IN: Use case 1]**
-- **[FILL IN: Use case 2]**
-- **[FILL IN: Use case 3]**
+
+- **Operating Systems & Low-Level Systems — Kernels, bootloaders, firmware where direct hardware control and memory manipulation are fundamental**
+- **Performance-Critical Applications — Game engines, real-time systems, databases, compilers where predictability and zero-overhead execution are essential**
+- **High-Assurance Software — Systems requiring complete auditability and explicit control flow, where implicit behavior is unacceptable**
 
 ### Design Principles
 - **[FILL IN: Principle 1]**

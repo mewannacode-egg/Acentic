@@ -36,7 +36,7 @@ as task(UNIQUE-ID) with address(TYPE-TASK-ADDRESS-HERE) {
   // code here...
 }
 ```
-
+Tasks are the fundamental execution units in XYZC. Each task has a unique identifier and an explicit memory address, giving the programmer full control over where code executes and how it's isolated.
 ### Function Declaration
 ```
 [FILL IN: Function syntax]

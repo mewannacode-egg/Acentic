@@ -106,46 +106,73 @@ Conditions in XYZC support multi-variable comparison, logical operators (`|` for
 
 ## Features
 
-### [FILL IN: Feature 1]
-**[Description]**
+### Task-Based Execution Model
+**XYZC organizes code into explicit tasks with unique identifiers and memory addresses. Each task is a first-class execution unit with full control over where and how it runs.**
 
-```
-[FILL IN: Code example]
-```
+as task(MAIN-TASK) with address(TYPE-KERNEL-SPACE) {
+  let virtual counter = INT 0;
+  for (counter == 10) {
+    counter = INT counter + INT 1;
+  }
+}
 
-### [FILL IN: Feature 2]
-**[Description]**
+### Explicit Storage Control
+**Every variable declaration specifies exactly where it lives — CPU register, stack, heap, or a pinned memory address. No hidden allocations, no abstraction overhead.**
 
-```
-[FILL IN: Code example]
-```
+let register fast_var = INT 100;
+let stack local_var = INT 200;
+let heap dynamic_var = BIG INT 999...;
+let virtual pinned = INT 42 at ADDR(0x8000);
 
-### [FILL IN: Feature 3]
-**[Description]**
+### Ternary Boolean Logic
+**XYZC's boolean system includes a probabilistic MAYBE state, enabling non-deterministic control flow and advanced logical conditions.**
 
-```
-[FILL IN: Code example]
-```
+if ((INT result = compute()) == MAYBE) {
+  // Randomly TRUE or FALSE on each evaluation
+}
+if any (BOOL a, b, c == TRUE) {
+  // TRUE if any condition matches
+}
 
 ## Examples
 
-### Example 1: [FILL IN: Title]
-```
-[FILL IN: Full working example]
-```
+### Example 1: Multi-Storage Variable Management
+A program demonstrating explicit storage control across different memory locations.
 
-### Example 2: [FILL IN: Title]
-```
-[FILL IN: Full working example]
-```
+as task(STORAGE-DEMO) with address(TYPE-USER-SPACE) {
+  let register speed = INT 1000;
+  let stack buffer = STR "processing";
+  let heap data = BIG INT 99999999999999999999;
+  let virtual flag = INT 1 at ADDR(0x5000);
+  
+  if (speed == INT 1000) {
+    let edit flag = INT 0;
+  }
+}
+
+### Example 2: Family Function with Probabilistic Logic
+A parent function managing child variables with MAYBE-based conditionals.
+
+callable HEAP parent(INT id) {
+  let editable HEAP child1(INT id) = INT 10;
+  let editable HEAP child2(INT id) = INT 20;
+  
+  let STACK sum = INT child1(id) + INT child2(id);
+  
+  if ((sum == INT 30) == MAYBE) {
+    return INT sum;
+  }
+}
 
 ## Comparison with Other Languages
 
 | Aspect | XYZC | C | Rust |
 |--------|------|---|------|
-| **[FILL IN]** | [FILL IN] | [FILL IN] | [FILL IN] |
-| **[FILL IN]** | [FILL IN] | [FILL IN] | [FILL IN] |
-
+| **Memory Control** | Explicit storage location for every variable (register, stack, heap, pinned address) | Manual memory management with pointers | Ownership system enforces safety automatically |
+| **Safety Guarantees** | Programmer responsibility; auditable and transparent | No compile-time safety; runtime errors possible | Compile-time memory safety; eliminates entire classes of bugs |
+| **Syntax Clarity** | Explicit type and storage declarations; verbose but unambiguous | Minimal syntax; implicit behavior | Modern syntax with trait system complexity |
+| **Execution Predictability** | Deterministic; what you write is what runs | Deterministic behavior | Some runtime overhead for safety checks |
+| **Learning Curve** | Steep; requires understanding memory hierarchy and hardware | Moderate; familiar to systems programmers | Steep; borrow checker and ownership rules |
 ---
 
-*XYZC: [FILL IN: Tagline/motto]*
+*XYZC: "sudo delete the kernel."*

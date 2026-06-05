@@ -98,10 +98,12 @@ Conditions in XYZC support multi-variable comparison, logical operators (`|` for
 
 | Type | Description | Example |
 |------|-------------|---------|
-| **INT** | 64-digit integer; use `BIG INT` for unlimited precision | `let INT a = 42;` or `let BIG INT b = 999999...;` |
-| **FLOAT** | 64-digit floating-point; use `BIG FLOAT` for unlimited precision | `let FLOAT x = 3.14;` or `let BIG FLOAT y = 3.14159...;` |
-| **STR** | String limited to 2064 characters; use `BIG STR` for unlimited | `let STR msg = "Hello";` or `let BIG STR text = "...";` |
+| **INT** | 64-digit integer; use `BIG INT` for unlimited precision | `let virtual a = INT 42;` or `let heap b = BIG INT 999999...;` |
+| **FLOAT** | 64-digit floating-point; use `BIG FLOAT` for unlimited precision | `let register x = FLOAT 3.14;` or `let stack y = BIG FLOAT 3.14159...;` |
+| **STR** | String limited to 2064 characters; use `BIG STR` for unlimited | `let static msg = STR "Hello";` or `let heap text = BIG STR "...";` |
 | **BOOL** | Ternary boolean: `TRUE`, `FALSE`, or `MAYBE` (probabilistic) | `if ((INT a = 7) == MAYBE) {}` |
+
+
 ## Features
 
 ### [FILL IN: Feature 1]

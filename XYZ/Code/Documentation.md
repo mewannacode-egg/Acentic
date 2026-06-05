@@ -175,4 +175,4 @@ callable HEAP parent(INT id) {
 | **Learning Curve** | Steep; requires understanding memory hierarchy and hardware | Moderate; familiar to systems programmers | Steep; borrow checker and ownership rules |
 ---
 
-*XYZC: "sudo delete the kernel."*
+*XYZC: "sudo rm -rf / --preserve-root"*

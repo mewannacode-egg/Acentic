@@ -74,17 +74,34 @@ Variables in XYZC give explicit control over storage location — virtual, regis
 
 ### Control Flow
 ```
-[FILL IN: If/else, loops, etc.]
+// conditions
+// else, else if, if
+if (INT a == 7) {} // check if INT a == 7
+if (INT a, b, c == 7) {} // checks if INT a, INT b, INT c == 7
+if (STR a, INT b, c == 7) {} // checks if STR a, INT b, INT c == 7
+if (INT a, b, c == 7, 8, 9) {} // checks if INT a == 7, INT b == 8, INT c == 9
+if (INT a | STR b == 7) {} // check if INT a or STR b == 7
+if (INT a || STR b == 7) {} // check if INT a and STR b == 7
+if any (INT a, b == 7) {} // TRUE if any are TRUE, else FALSE
+if all (INT a, b == 7) {} // TRUE if all are TRUE
+if ((INT a = 7) == TRUE) {} // check if INT a == 7 == TRUE
+if ((INT a = 7) == FALSE) {} // check if INT a == 7 == FALSE
+if ((INT a = 7) == MAYBE) {} // each call randomly becomes TRUE or FALSE
+
+// loops
+for (a == 7) {} //runs while a == 7
 ```
+
+Conditions in XYZC support multi-variable comparison, logical operators (`|` for OR, `||` for AND), and probabilistic states (`MAYBE` for non-deterministic truthiness). Loops are condition-driven.
 
 ## Data Types
 
 | Type | Description | Example |
 |------|-------------|---------|
-| **[FILL IN]** | [FILL IN] | `[FILL IN]` |
-| **[FILL IN]** | [FILL IN] | `[FILL IN]` |
-| **[FILL IN]** | [FILL IN] | `[FILL IN]` |
-
+| **INT** | 64-digit integer; use `BIG INT` for unlimited precision | `let INT a = 42;` or `let BIG INT b = 999999...;` |
+| **FLOAT** | 64-digit floating-point; use `BIG FLOAT` for unlimited precision | `let FLOAT x = 3.14;` or `let BIG FLOAT y = 3.14159...;` |
+| **STR** | String limited to 2064 characters; use `BIG STR` for unlimited | `let STR msg = "Hello";` or `let BIG STR text = "...";` |
+| **BOOL** | Ternary boolean: `TRUE`, `FALSE`, or `MAYBE` (probabilistic) | `if ((INT a = 7) == MAYBE) {}` |
 ## Features
 
 ### [FILL IN: Feature 1]

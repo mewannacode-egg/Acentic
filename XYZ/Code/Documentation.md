@@ -24,9 +24,9 @@ The language assumes you know what you're doing. It provides the tools for low-l
 - **High-Assurance Software — Systems requiring complete auditability and explicit control flow, where implicit behavior is unacceptable**
 
 ### Design Principles
-- **[FILL IN: Principle 1]**
-- **[FILL IN: Principle 2]**
-- **[FILL IN: Principle 3]**
+- **Explicit Over Implicit** — No hidden allocations, implicit conversions, or magical behavior. What you write is what executes.
+- **Programmer Trust** — The language assumes competence and intent. Safety is the programmer's responsibility, not enforced by the compiler.
+- **Complete Control** — Direct access to memory, hardware, and execution flow without abstraction layers or restrictions standing in the way.
 
 ## Syntax
 

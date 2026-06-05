@@ -56,6 +56,8 @@ let editable STORAGE-LOCATION-HERE childNum1(INT id) = int 0; //same
 // ^^^^^^^^^^ this keyword allows files (or users) to edit the variable outside the file
 ```
 
+Functions in XYZC are storage-explicit and support family hierarchies. The `editable` keyword allows external modification of child variables, giving precise control over scope and access patterns.
+
 ### Variables
 ```
 [FILL IN: Variable declaration syntax]

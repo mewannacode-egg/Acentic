@@ -65,7 +65,9 @@ let register a = INT 7; // stores a in CPU
 let stack a = INT 7; // stores a in a stack frame
 let static a = INT 7; // stores a in a data segment
 let heap a = INT 7; // stores a in a heap
-let volatile a = INT 7; // store a in the Stack (if it's local) or the Data Segment (if it's global).
+// Flags
+let STORAGE-LOCATION-HERE volatile a = INT 7; // forces the compiler to lookup the variable everytime (never cache)
+let STORAGE-LOCATION-HERE a = INT 7 at ADDR(0x4000) // store a at a specific address
 ```
 
 ### Control Flow

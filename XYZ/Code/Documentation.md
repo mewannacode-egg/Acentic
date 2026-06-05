@@ -2,7 +2,7 @@
 
 ## Overview
 
-**[FILL IN: What is XYZC? Core philosophy/vision]**
+**XYZC is a systems programming language designed for developers who need explicit control over memory, execution, and resource allocation without compromise. It prioritizes predictability, auditability, and performance-critical semantics while remaining practical for large-scale systems development.**
 
 ## Table of Contents
 1. [About](#about)
@@ -13,7 +13,9 @@
 
 ## About
 
-**[FILL IN: Detailed description of language goals and design philosophy]**
+XYZC is engineered for scenarios where C's simplicity and control meet modern systems demands. Unlike languages that enforce safety through restrictions, XYZC trusts the developer to make intentional trade-offs between safety guarantees and performance requirements. Every feature is designed to be auditable — what you write is what executes, with no hidden allocations, implicit behavior, or runtime overhead.
+
+The language assumes you know what you're doing. It provides the tools for low-level manipulation, direct hardware access, and fine-grained resource management without apology or compromise. Safety mechanisms exist where they add value without performance cost; elsewhere, the responsibility lies with the programmer.
 
 ### Target Use Cases
 - **[FILL IN: Use case 1]**

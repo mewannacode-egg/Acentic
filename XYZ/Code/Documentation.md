@@ -32,7 +32,9 @@ The language assumes you know what you're doing. It provides the tools for low-l
 
 ### Basic Structure
 ```
-[FILL IN: Example basic program structure]
+as task(UNIQUE-ID) with address(TYPE-TASK-ADDRESS-HERE) {
+  // code here...
+}
 ```
 
 ### Function Declaration
